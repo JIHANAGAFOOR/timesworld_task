@@ -1,54 +1,49 @@
-# React + TypeScript + Vite
+# Country Explorer App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React + Vite application built as part of a machine test. It includes a login page with form validation and a home page that displays country data fetched from a public API. The app includes a custom slider, pagination, filtering by continent, and uses modern React best practices.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Hosted on Vercel: [View Live App](https://timesworld-task-five.vercel.app/)  
+(Replace with your actual Vercel link)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Login Page with form validation
+- Password must be at least 8 characters long and include:
+  - At least 1 uppercase letter
+  - At least 1 number
+  - At least 1 special symbol
+- Redirects to Home page upon successful login
+- Home Page displays list of countries with:
+  - Name
+  - Flag
+  - Region
+- Country data fetched from: `https://restcountries.com/v2/all?fields=name,region,flag`
+- Load more pagination for country list
+- Filter countries by continent (region)
+- Custom image slider with next, previous buttons and dot indicators
+- Fully responsive design
+- Functional components with React Hooks
+- State management using Redux Toolkit
+- Styled using React-Bootstrap
+- Code pushed to public GitHub repository
+- Deployed on Vercel
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- React (with Vite)
+- React Hooks
+- Redux Toolkit
+- React-Bootstrap
+- REST API
+- GitHub
+- Vercel for deployment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Installation Instructions
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+1. Clone the repository:
+
+```bash
+git clone https://github.com/JIHANAGAFOOR/timesworld_task.git
+

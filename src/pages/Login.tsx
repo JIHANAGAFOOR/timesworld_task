@@ -80,7 +80,9 @@ const Login = () => {
 
             <div className="d-flex  mb-8">
               <p className="mb-0 ">New User?</p>
-              <a href="#">Create an account</a>
+              <a href="#" className="ml-2 !no-underline">
+                Create an account
+              </a>
             </div>
             <Form onSubmit={onHandleSubmit}>
               <TextInput
@@ -149,7 +151,7 @@ const Login = () => {
             </Form>
             <div className="d-flex align-items-center my-4">
               <hr className="flex-grow-1 border border-dark" />
-              <div className="px-3 fw-bold text-center">Login</div>
+              <div className="px-3 fw-bold text-center"> Or Sign In With</div>
               <hr className="flex-grow-1 border border-dark" />
             </div>
             <Icons />
